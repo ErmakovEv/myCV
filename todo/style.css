@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(3, 97, 8);
+    height: 100vh;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.todo_background {
+    background-color: #222;
+    height: 97%;
+    width: 97%;
+    border-radius: 10px;
+    font-size: 34px;
+    color: aliceblue;
+}
+
+.todo_title {
+    padding: 20px 30px;
+}
+
+.todo_add {
+    width: 87%;
+    padding: 10px 20px;
+    margin: 10px 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: rgb(3, 97, 8);
+}
+
+::placeholder { 
+    color: aliceblue;
+    font-size: 16px;
+    font-style: italic;
+  }
+
+.todo_list {
+    font-size: 20px;
+    margin: 10px 30px;
+    padding-left: 0px;
+    padding-right: 13px;
+}
+
+.todo_task{
+    display: flex;
+    min-height: 35px;
+}
+
+.todo_task:hover .button_del {
+    display: block;
+}
+
+.button_add,
+.button_del{
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    border: 0px;
+    background-color: rgb(3, 97, 8);
+    border-radius: 50%;
+    padding: 0px;
+    margin-right: 30px;
+    font-size: 16px;
+    color: aliceblue;
+}
+
+.button_del {
+    display: none;
+    margin-left: auto;
+    margin-right: 8px;
+}
+
+.todo_task_text {
+    padding-left: 10px;
+}
+  
+.check {
+    display: none;
+}
+
+.todo_checkbox div {
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    border: 2px solid rgb(3, 97, 8);
+}
+
+.todo_checkbox input:checked + div {
+    background-color: rgb(3, 97, 8);
+}
+
+.todo_checkbox input:checked + .todo_task_text {
+    text-decoration: line-through;
+}
+
+.todo_list > *:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.todo_task_complited {
+    text-decoration: line-through;
+    color: rgb(83, 83, 83);
+}
